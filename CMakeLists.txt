@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(Curves)
+set(CNAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(CurvesLibraryDynamic SHARED curves.h curves.cpp)
+add_executable(CurvesClient main.cpp)
+target_link_libraries(CurvesClient CurvesLibraryDynamic)
